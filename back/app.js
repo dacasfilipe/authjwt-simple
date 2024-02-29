@@ -3,7 +3,9 @@ const db = require('./db');
 const cors = require('cors');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
-const SECRET_KEY = 'senai2024'; // Mantenha este segredo seguro
+const SECRET_KEY = process.env.SECRET_KEY; 
+require('dotenv').config();
+
 
 const app = express();
 
